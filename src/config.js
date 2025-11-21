@@ -1,14 +1,14 @@
 const config = {
 	//网页元数据
 	metaData: {
-		title: 'Leleo的个人主页🎉',
-		description: '欢迎来到Leleo的奇妙世界！',
-		keywords: 'Leleo,leleo,个人主页,个人网站',
+		title: '晨殇的个人主页🎉',
+		description: 'Ciallo~ 欢迎来到晨殇的世界！',
+		keywords: 'Chenn,chenn,个人主页,个人网站',
 		icon: '/favicon.ico'   //网页图标，支持外链
 	},
 
 	avatar: "/img/avatar.jpg", // 头像
-	welcometitle: "Hi, I'm Leleo", // 标题
+	welcometitle: "Hi, I'm Chenn", // 标题
 
 	// 颜色配置
 	color: {
@@ -22,16 +22,16 @@ const config = {
 	blur: 5, // 毛玻璃模糊效果
 
 	// 我的标签
-	tags: ['乐观开朗', '温柔体贴', '随和亲切', '冷静沉着', '才思敏捷', '风趣幽默', '刚正不阿', '善解人意'],
+	tags: ['极度社恐',  '二次元', '科技宅', '游戏宅'],
 
 	// 默认背景壁纸
 	background: {
 		"pc": {   //pc端
 			"type": "pic",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
-				"title": "海洋女孩",
-				"preview": "/img/wallpaper/static/海洋女孩/image-pre.webp",
-				"url": "/img/wallpaper/static/海洋女孩/image.png",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"title": "狙击女孩",
+				"preview": "/img/wallpaper/static/狙击女孩/image-pre.webp",
+				"url": "/img/wallpaper/static/狙击女孩/image.png",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
@@ -63,10 +63,10 @@ const config = {
 
 	//打字机
 	typeWriterStrings: [
-		"如果你看到了这行字，说明我已经成功吸引到了你的注意力。",
-		"顶峰的少年，给了你所有细节，你却说我不是迪迦，给不了你想要的光。",
-		"心简单，世界就简单，幸福才会生长；心自由，生活就自由，到哪都有快乐。",
-		"生命太短，没有时间留给遗憾，若不是终点，请微笑一直向前。"
+		"愿你驶过洞天，观无量寿数摹绘生命的华彩",
+		"愿你览历梦海，为醉人幻境奏响清脆的舞曲。",
+		"愿你终抵彼岸，于桑榆暮景坐看云起云舒。",
+		"愿此行，终抵群星"
 	],
 
 	//音乐播放配置，采用MetingJS Api(https://github.com/metowolf/MetingJS)
@@ -148,7 +148,7 @@ const config = {
 		{ go: "🔍 前往", img: "/img/sunshine.jpg", title: "Project 8", subtitle: "8,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 	],
 
-	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Leleo"],
+	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Chenn"],
 }
 
 export default config
