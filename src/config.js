@@ -4,7 +4,7 @@ const config = {
 		title: '晨殇的个人主页🎉',
 		description: 'Ciallo~ 欢迎来到晨殇的世界！',
 		keywords: 'Chenn,chenn,个人主页,个人网站',
-		icon: '/favicon.ico'   //网页图标，支持外链
+		icon: '/favicon'   //网页图标，支持外链
 	},
 
 	avatar: "/img/avatar.jpg", // 头像
