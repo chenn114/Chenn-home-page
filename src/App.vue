@@ -1,25 +1,5 @@
-
 <template>
-  < <!-- ① 密码锁屏层（最优先渲染）-->
-  <div v-if="!isUnlocked" class="password-overlay">
-    <div class="password-box">
-      <h2>请输入访问密码</h2>
-      <v-text-field
-        v-model="inputPassword"
-        label="密码"
-        variant="outlined"
-        type="password"
-        class="mt-4"
-      ></v-text-field>
-
-      <v-btn color="primary" @click="checkPassword" class="mt-2">进入</v-btn>
-
-      <p v-if="error" style="color:red;margin-top:10px;">密码错误</p>
-    </div>
-  </div>
-
-
-  <v-app v-else class="vapp-fullscreen-background" style="overflow: hidden;" :class="{ 'radius-before': !xs }"
+  <v-app class="vapp-fullscreen-background" style="overflow: hidden;" :class="{ 'radius-before': !xs }"
   :style="xs?{height: '100%',width: '100%',top: '0',left:'0'}:(sm?{height: '98%',width: '98%',top: '1%',left:' 1%'}:{height: '96.6%',width: '99%',top: '1.7%',left:' 0.5%'})">
     <transition name="fade">
       <div class="loading" v-show="isloading">
