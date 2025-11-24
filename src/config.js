@@ -146,7 +146,7 @@ const config = {
 		{ go: "🗃 前往", img: "/img/sunshine.jpg", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
-		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。", url: "https://leleo.top", show: false },
+		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。", url: " https://www.baidu.com", show: false }, //链接: https://pan.baidu.com/s/134g7oCut30fc1vYxiQyvNg 提取码: yzky
 	],
 
 	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Chenn"],
