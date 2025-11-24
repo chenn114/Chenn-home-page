@@ -1,38 +1,25 @@
 
 <template>
-  <v-dialog
-  v-model="showLock"
-  persistent
-  width="400"
->
-  <v-card class="pa-4" style="text-align:center">
-    <div class="text-h6 mb-4">请输入访问密码</div>
+  < <!-- ① 密码锁屏层（最优先渲染）-->
+  <div v-if="!isUnlocked" class="password-overlay">
+    <div class="password-box">
+      <h2>请输入访问密码</h2>
+      <v-text-field
+        v-model="inputPassword"
+        label="密码"
+        variant="outlined"
+        type="password"
+        class="mt-4"
+      ></v-text-field>
 
-    <v-text-field
-      v-model="passwordInput"
-      label="Password"
-      variant="outlined"
-      type="password"
-      @keyup.enter="checkPassword"
-    ></v-text-field>
+      <v-btn color="primary" @click="checkPassword" class="mt-2">进入</v-btn>
 
-    <v-btn
-      class="mt-2"
-      color="primary"
-      @click="checkPassword"
-      block
-    >
-      确认
-    </v-btn>
-
-    <div v-if="errorMsg" class="mt-2" style="color:red;">
-      {{ errorMsg }}
+      <p v-if="error" style="color:red;margin-top:10px;">密码错误</p>
     </div>
-  </v-card>
-</v-dialog>
+  </div>
 
 
-  <v-app class="vapp-fullscreen-background" style="overflow: hidden;" :class="{ 'radius-before': !xs }"
+  <v-app v-else class="vapp-fullscreen-background" style="overflow: hidden;" :class="{ 'radius-before': !xs }"
   :style="xs?{height: '100%',width: '100%',top: '0',left:'0'}:(sm?{height: '98%',width: '98%',top: '1%',left:' 1%'}:{height: '96.6%',width: '99%',top: '1.7%',left:' 0.5%'})">
     <transition name="fade">
       <div class="loading" v-show="isloading">
