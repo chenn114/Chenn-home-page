@@ -19,10 +19,12 @@ export default {
   name: "PasswordLock",
   data() {
     return {
-      inputPassword: "",
+      showLock: true,
+      passwordInput: "",
       correctPassword: "123456", // ★ 你要设置的密码
-      error: false,
-      unlocked: false,
+      errorMsg: "",
+      // error: false,
+      // unlocked: false,
     };
   },
   created() {
@@ -33,11 +35,12 @@ export default {
   },
   methods: {
     checkPassword() {
-      if (this.inputPassword === this.correctPassword) {
-        this.unlocked = true;
+      if (this.passwordInput === this.correctPassword) {
+        this.showLock = false;
+        this.errorMsg = "";
         localStorage.setItem("website_unlocked", "true");
       } else {
-        this.error = true;
+        this.errorMsg = "密码错误，请重试";
       }
     }
   }

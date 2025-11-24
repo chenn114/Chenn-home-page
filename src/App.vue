@@ -1,20 +1,37 @@
-<template>
-  <PasswordLock /> <!-- ★ 加在最前面 -->
-  <router-view />   <!-- 显示页面内容 -->
-</template>
-
-<script>
-import PasswordLock from "./components/PasswordLock.vue";
-
-export default {
-  components: {
-    PasswordLock,
-  },
-};
-</script>
-
 
 <template>
+  <v-dialog
+  v-model="showLock"
+  persistent
+  width="400"
+>
+  <v-card class="pa-4" style="text-align:center">
+    <div class="text-h6 mb-4">请输入访问密码</div>
+
+    <v-text-field
+      v-model="passwordInput"
+      label="Password"
+      variant="outlined"
+      type="password"
+      @keyup.enter="checkPassword"
+    ></v-text-field>
+
+    <v-btn
+      class="mt-2"
+      color="primary"
+      @click="checkPassword"
+      block
+    >
+      确认
+    </v-btn>
+
+    <div v-if="errorMsg" class="mt-2" style="color:red;">
+      {{ errorMsg }}
+    </div>
+  </v-card>
+</v-dialog>
+
+
   <v-app class="vapp-fullscreen-background" style="overflow: hidden;" :class="{ 'radius-before': !xs }"
   :style="xs?{height: '100%',width: '100%',top: '0',left:'0'}:(sm?{height: '98%',width: '98%',top: '1%',left:' 1%'}:{height: '96.6%',width: '99%',top: '1.7%',left:' 0.5%'})">
     <transition name="fade">
