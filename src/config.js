@@ -53,7 +53,7 @@ const config = {
 
 	//社交按钮
 	socialPlatformIcons: [
-		{ icon: "mdi-github", link: "https://github.com/chenn114" },
+		{ icon: "mdi-github", link: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd" },  //Link: https://github.com/chenn114
 		{ icon: "mdi-email", link: "mailto:2698395241@qq.com" },
 		{ icon: "mdi-qqchat", link: "https://im.qq.com/" },
 		{ icon: "mdi-wechat", link: "https://wx.qq.com/" },
