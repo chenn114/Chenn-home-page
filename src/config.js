@@ -18,11 +18,11 @@ const config = {
 		turntablecolor2: "#00FFFF"   // 转盘渐变色二
 	},
 
-	brightness: 65, // 背景亮度 --%
+	brightness: 80, // 背景亮度 --%
 	blur: 3, // 毛玻璃模糊效果
 
 	// 我的标签
-	tags: ['极度社恐',  '二次元', '科技宅', '游戏宅'],
+	tags: ['极度社恐',  '二次元', '游戏宅', '科技宅拯救世界'],
 
 	// 默认背景壁纸
 	background: {
@@ -35,11 +35,11 @@ const config = {
 			},
 		},
 		"mobile": {   //移动端
-			"type": "pic",
+			"type": "video",
 			"datainfo": {
-				"title": "0001",
-				"preview": "/img/wallpaper/static-mobile/0001/image-pre.webp",
-				"url": "/img/wallpaper/static-mobile/0001/image.png"  //同理，随机移动端壁纸："url":"https://t.mwm.moe/mp"
+				"title": "Doodle-小猫女仆降临",
+				"preview": "/img/wallpaper/dynamic-mobile/幻觉镇-gaako_illust/Hallucination_town-pre.mp4",
+				"url": "/img/wallpaper/dynamic-mobile/幻觉镇-gaako_illust/Hallucination_town.mp4"  //同理，随机移动端壁纸："url":"https://t.mwm.moe/mp"
 			}
 		}
 
@@ -139,9 +139,9 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🚀 前往", img: "/img/SectorImg/GithubSector.jpg", title: "Chenn的github主页", subtitle: "一个菜鸟的github主页", text: "包含了一些小项目和一些测试笔记.", url: "https://github.com/chenn114", show: false },
-		{ go: "🗂️ 前往", img: "/img/SectorImg/GameSector.jpg", title: "Chenn的游戏作品集", subtitle: "一个游戏爱好者的自学作品", text: "包含两个游戏作品：Survival-Shoot和Tank-Fight", url: "https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg", show: false },
-		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.szu.edu.cn/", show: false },
+		{ go: "🚀 前往", img: "/img/SectorImg/GithubSector.jpg", title: "Chenn的github主页", subtitle: "一个菜鸟的github主页", text: "包含了一些小项目和一些笔记.", url: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd", show: false },//github主页：https://github.com/chenn114
+		{ go: "🗂️ 前往", img: "/img/SectorImg/GameSector.jpg", title: "Chenn的游戏作品集", subtitle: "一个游戏爱好者的自学作品", text: "包含两个游戏作品：Survival-Shoot和Tank-Fight", url: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd", show: false },//游戏作品集：https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg
+		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.tsinghua.edu.cn/", show: false },//深圳大学网站：https://www.szu.edu.cn/
 		{ go: "👍 前往", img: "/img/sunshine.jpg", title: "Project 4", subtitle: "4,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🗃 前往", img: "/img/sunshine.jpg", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
