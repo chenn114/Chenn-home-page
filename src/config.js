@@ -53,7 +53,7 @@ const config = {
 
 	//社交按钮
 	socialPlatformIcons: [
-		{ icon: "mdi-github", link: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd" },  //Link: https://github.com/chenn114
+		{ icon: "mdi-github", link: "https://github.com/chenn114" },  //Link: https://github.com/chenn114
 		{ icon: "mdi-email", link: "mailto:2698395241@qq.com" },
 		{ icon: "mdi-qqchat", link: "https://im.qq.com/" },
 		{ icon: "mdi-wechat", link: "https://wx.qq.com/" },
@@ -139,9 +139,9 @@ const config = {
 
 	//项目卡片 其中 字段"show"控制初始卡片的text是否展开
 	projectcards: [
-		{ go: "🚀 前往", img: "/img/SectorImg/GithubSector.jpg", title: "Chenn的github主页", subtitle: "一个菜鸟的github主页", text: "包含了一些小项目和一些笔记.", url: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd", show: false },//github主页：https://github.com/chenn114
-		{ go: "🗂️ 前往", img: "/img/SectorImg/GameSector.jpg", title: "Chenn的游戏作品集", subtitle: "一个游戏爱好者的自学作品", text: "包含两个游戏作品：Survival-Shoot和Tank-Fight", url: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd", show: false },//游戏作品集：https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg
-		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.tsinghua.edu.cn/", show: false },//深圳大学网站：https://www.szu.edu.cn/
+		{ go: "🚀 前往", img: "/img/SectorImg/GithubSector.jpg", title: "Chenn的github主页", subtitle: "一个菜鸟的github主页", text: "包含了一些小项目和一些笔记.", url: "https://github.com/chenn114", show: false },//github主页：https://github.com/chenn114
+		{ go: "🗂️ 前往", img: "/img/SectorImg/GameSector.jpg", title: "Chenn的游戏作品集", subtitle: "一个游戏爱好者的自学作品", text: "包含两个游戏作品：Survival-Shoot和Tank-Fight; 提取码：mhym", url: "https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg", show: false },//游戏作品集：https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg
+		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.szu.edu.cn/", show: false },//深圳大学网站：https://www.szu.edu.cn/
 		{ go: "👍 前往", img: "/img/sunshine.jpg", title: "Project 4", subtitle: "4,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "🗃 前往", img: "/img/sunshine.jpg", title: "Project 5", subtitle: "5,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
