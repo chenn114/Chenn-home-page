@@ -147,6 +147,8 @@ const config = {
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。提取码: XHJe", url: " https://pan.quark.cn/s/192aa295ae6f", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
+		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 9", subtitle: "9,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
+		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 10", subtitle: "10,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 	],
 
 	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Chenn"],
