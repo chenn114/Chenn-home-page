@@ -1,7 +1,7 @@
 const config = {
 	//网页元数据
 	metaData: {
-		title: '晨殇的个人主页🎉',
+		title: '晨殇的个人主页🎉Ciallo~(∠・ω< )⌒☆',
 		description: 'Ciallo~ 欢迎来到晨殇的世界！',
 		keywords: 'Chenn,chenn,个人主页,个人网站',
 		icon: '/img/favicon.ico'   //网页图标，支持外链
@@ -22,7 +22,7 @@ const config = {
 	blur: 3, // 毛玻璃模糊效果
 
 	// 我的标签
-	tags: ['极度社恐',  '二次元', '游戏宅', '科技宅拯救世界'],
+	tags: ['极度社恐',  '二次元', '游戏宅', '科技宅拯救世界', '赛码娘(bushi)'],
 
 	// 默认背景壁纸
 	background: {
@@ -147,8 +147,8 @@ const config = {
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。提取码: XHJe", url: " https://pan.quark.cn/s/192aa295ae6f", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
-		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 9", subtitle: "9,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
-		{ go: "💍 前往", img: "/img/sunshine.jpg", title: "Project 10", subtitle: "10,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
+		{ go: "📝 前往", img: "/img/sunshine.jpg", title: "Project 9", subtitle: "9,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
+		{ go: "📝 前往", img: "/img/sunshine.jpg", title: "Project 10", subtitle: "10,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 	],
 
 	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Chenn"],
