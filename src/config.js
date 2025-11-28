@@ -146,7 +146,7 @@ const config = {
 		{ go: "🗃 前往", img: "/img/SectorImg/TestSector.jpg", title: "Project 5测试", subtitle: "知识分享模块测试", text: "模版测试", url: "/projects/Project5test/test.html", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "💍 前往", img: "/img/SectorImg/BeggingSector.jpg", title: "赛博要饭", subtitle: "生活不易，卖身也卖艺(", text: "求有钱人包养QAQ", url: "/sbyf/donate.html", show: false },
-		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。提取码：JCxP", url: " https://pan.quark.cn/s/db7656fe7627", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
+		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。", url: " /projects/Game/test.html", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
 		
 	],
 
