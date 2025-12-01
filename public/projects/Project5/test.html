@@ -126,20 +126,22 @@
                 }
             </code>
             <br>
-
+            第三步, 我们需要在FixedUpdate方法中实现相机跟随玩家移动的功能。<br>
+            为了不受到帧率的影响, 我们更新距离的函数放在FixedUpdate函数中, 
+            按照固定间隔执行更新(0.02s), 同时为了相机跟随玩家的移动更加平滑, 我们需要利用之前定义的平滑度, 再加上Math.Lerp函数。
+            (此处不再赘述Math.Lerp函数的作用)<br>
             
-            第三步, 我们需要在Update方法中实现相机跟随玩家移动的功能。<br>
             <code>
-                private void Update()
+                private void FixedUpdate()
                 {
-                    transform.position = player.transform.position + offset;
+                    transform.position = Vector3.Lerp(transform.position, offset + player.transform.position, Smoothing*Time.deltaTime) ;//相机跟随功能 
                 }
             </code>
-
+            
 
         </p>
-
-        <img src="./images/demo.png" alt="示例图片">
+        至此, 一个简单的Unity相机跟随玩家移动功能就写好了。 方法不唯一, 在此只分享个人的拙见。感谢阅读！
+        <img src="./images/demo.png" alt="示例图片" style="max-width: 80%; height: auto;">
 
         <p>
             继续写内容……
