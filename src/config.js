@@ -143,7 +143,7 @@ const config = {
 		{ go: "🗂️ 前往", img: "/img/SectorImg/GameSector.jpg", title: "Chenn的游戏作品集", subtitle: "一个游戏爱好者的自学作品", text: "包含两个游戏作品：Survival-Shoot和Tank-Fight;", url: "https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=3c97ead915ba96fdc0f35a1b8cf430dd", show: false },//游戏作品集：https://pan.baidu.com/s/1oeIIMtzVqhccS9Y_ZJUCyg
 		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.szu.edu.cn/", show: false },//深圳大学网站：https://www.szu.edu.cn/
 		{ go: "👍 前往", img: "/img/SectorImg/About-siteSector.jpg", title: "小站使用教程", subtitle: "关于本站的一些介绍和用法", text: "站在巨人肩膀上搭起来的网站", url: "/projects/about-site/about-site.html", show: false },
-		{ go: "🗃 前往", img: "/img/SectorImg/TestSector.jpg", title: "Project 5测试", subtitle: "知识分享模块测试", text: "模版测试", url: "/projects/Project5test/test.html", show: false },
+		{ go: "🗃 前往", img: "/img/SectorImg/TestSector.jpg", title: "Project 5", subtitle: "知识分享模块", text: "Unity设置相机跟随玩家的操作", url: "/projects/Project5/test.html", show: false },
 		{ go: "🎨 前往", img: "/img/sunshine.jpg", title: "Project 6", subtitle: "6,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://www.yuanshen.com/#/", show: false },
 		{ go: "💍 前往", img: "/img/SectorImg/BeggingSector.jpg", title: "赛博要饭", subtitle: "生活不易，卖身也卖艺(", text: "求有钱人包养QAQ", url: "/sbyf/donate.html", show: false },
 		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。", url: " /projects/Game/test.html", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
