@@ -4,42 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <meta name="description" content="欢迎来到Leleo的奇妙世界！" />
-    <meta name="keywords" content="Leleo,leleo,个人主页,个人网站" />
-    <title>Leleo 的个人主页</title>
-
-    <!-- ========== 桌宠 Oml2d 所需的 CSS ========== -->
-    <link
-      rel="stylesheet"
-      href="https://oml2d.hacxy.cn/lib/latest/oml2d.min.css"
-    />
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="欢迎来到晨殇的奇妙世界！">
+    <meta name="keywords" content="Chenn,chenn,个人主页,个人网站">
+    <title></title>
   </head>
-
   <body>
     <div id="app"></div>
-
-    <!-- ========== 你的 Vue 程序入口 ========== -->
     <script type="module" src="/src/main.js"></script>
-
-    <!-- ========== 桌宠 Oml2d JS ========== -->
-    <script src="https://oml2d.hacxy.cn/lib/latest/oml2d.min.js"></script>
-
-    <!-- ========== 启动桌宠：只在首页运行 ========== -->
-    <script>
-      // 你现在是 Vue + Vite SPA，路由切换会单页跳转
-      // 因此桌宠只需在首页 index.html 加载一次
-
-      Oml2d.load({
-        model: "shizuku", // 桌宠模型，可换：koharu / hijiki / baffe 等
-        position: "right", // 位置：left | right
-        scale: 0.11, // 大小
-        tips: {
-          welcome: "欢迎来到 Leleo 的个人主页！",
-          idle: "我会一直陪着你哦~",
-          click: "欸？你戳我干嘛！(；ﾟдﾟ)",
-        },
-      });
-    </script>
   </body>
 </html>
