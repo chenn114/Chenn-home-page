@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>知识分享</title>
+    <link rel="icon" href="/img/favicon.ico">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: "myfont", sans-serif;
+            background: linear-gradient(45deg, #a2d0ff, #ffffff);
+            color: #000000 !important;
+            /* 字体变黑 */
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #7dcfff;
+            text-align: center;
+        }
+
+        h2 {
+            color: #68b1ff;
+        }
+
+        a {
+            color: #7dcfff;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            color: #68b1ff;
+            font-size: 18px;
+        }
+
+        code {
+            font-size: 18px;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 6px;
+            display: block;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📘知识分享--关于Unity中设置相机跟随玩家的移动</h1>
+
+        <p>
+            本模块主要分享一些在Unity中遇到的问题以及解决方法:
+            关于Unity中设置相机跟随玩家的移动。
+        </p>
+
+        <h2>✨ 简介</h2>
+        <p>
+            在Unity中, 设置相机跟随玩家的移动是一个常见的需求。例如在第一、三人称视角游戏中, 相机需要跟随玩家移动, 以提供更好的游戏体验。
+            本篇将介绍如何使用Unity来实现相机跟随玩家的移动(以第三人称视角为例, 第一人称视角同理)。
+        </p>
+
+        <img src="./images/introduce.png" alt="示例图片" style="max-width: 80%; height: auto;">
+
+
+        <h2>✨ 具体实现步骤</h2>
+        <p>
+            首先, 我们需要做一些准备工作。<br>
+            1. 创建一个物体, 并命名为"Player"。(这个物体用于表示玩家, 我们可以直接使用Player物体)<br>
+            2. 准备一个相机, 并命名为"Camera"。(方便起见, 我们可以直接使用项目里自带的主相机)<br>
+            3. 创建一个脚本, 并命名为"CameraFollow"。(这个脚本用于控制相机跟随玩家移动)<br>
+            4. 将"CameraFollow"脚本挂载到"Camera"物体上。<br>
+
+            <img src="./images/Step4.png" alt="示例图片" style="max-width: 80%; height: auto;"> <br>
+
+            接下来, 我们开始编写"CameraFollow"脚本。利用Transform组件的Translate方法, 我们可以实现相机跟随玩家移动的功能。<br>
+            <br>
+            第一步，我们需要获取玩家的位置, 并且获得相机与玩家之间的距离。因此需要先定义一些变量。<br>
+            在public class CameraFollow中, 定义以下变量:<br>
+            <code>
+                private GameObject player; // 定义玩家物体<br>
+                private Vector3 offset; // 定义了一个Vector3向量变量(注意是向量，有方向)<br>
+                public float Smoothing = 5f;// 定义了平滑度(即相机跟随玩家移动的平滑程度)<br>
+            </code>
+            <br>
+            
+            第二步, 我们需要在Awake方法中获取玩家物体, 并且在Start方法中获取相机与玩家之间的距离(即offset的值)。<br>
+            Awake方法是在游戏开始时执行的, 而Start方法是在游戏开始后执行的。因此Awake方法中的代码会先于Start方法执行。<br>
+            所以代码中Awake方法需要放在Start方法之前。<br>
+            <br>
+            获取玩家物体: 利用FindGameObjectWithTag方法, 获取玩家物体。<br>
+            <code>
+                private void Awake()
+                {
+                    player =GameObject.FindGameObjectWithTag("Player"); 
+                }//根据tag获取游戏角色                                                 
+            </code>
+            <img src="./images/Step4-2.png" alt="示例图片" style="max-width: 80%; height: auto;"> <br>
+
+            <br>
+            获取相机与玩家之间的距离: 利用transform.position - player.transform.position (相机自身的位置 - 玩家的位置), 获取相机与玩家之间的距离。<br>
+            <code>
+                private void Start()
+                {
+                    offset = transform.position - player.transform.position; // 获取相机与玩家之间的距离
+                }
+            </code>
+            <br>
+            第三步, 我们需要在FixedUpdate方法中实现相机跟随玩家移动的功能。<br>
+            为了不受到帧率的影响, 我们更新距离的函数放在FixedUpdate函数中, 
+            按照固定间隔执行更新(0.02s), 同时为了相机跟随玩家的移动更加平滑, 我们需要利用之前定义的平滑度, 再加上Math.Lerp函数。
+            (此处不再赘述Math.Lerp函数的作用)<br>
+            
+            <code>
+                private void FixedUpdate()
+                {
+                    transform.position = Vector3.Lerp(transform.position, offset + player.transform.position, Smoothing*Time.deltaTime) ;//相机跟随功能 
+                }
+            </code>
+            
+
+        </p>
+        至此, 一个简单的Unity相机跟随玩家移动功能就写好了。 方法不唯一, 在此只分享个人的拙见。感谢阅读！
+        <img src="./images/demo.png" alt="示例图片" style="max-width: 80%; height: auto;">
+
+        <p>
+            其他内容待续...
+        </p>
+
+        <a href="https://chenn113.pages.dev/" class="back-btn">⬅ 返回主页</a>
+    </div>
+
+</body>
+
+</html>
