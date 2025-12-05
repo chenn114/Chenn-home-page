@@ -144,7 +144,7 @@ const config = {
 		{ go: "📝 前往", img: "/img/SectorImg/SZUSector.jpg", title: "深圳大学网站", subtitle: "欢迎来到深圳大学", text: "深大官方网站", url: "https://www.szu.edu.cn/", show: false },//深圳大学网站：https://www.szu.edu.cn/
 		{ go: "👍 前往", img: "/img/SectorImg/About-siteSector.jpg", title: "小站使用教程", subtitle: "关于本站的一些介绍和用法", text: "站在巨人肩膀上搭起来的网站", url: "/projects/about-site/about-site.html", show: false },
 		{ go: "🗃 前往", img: "/img/SectorImg/TestSector.jpg", title: "Unity相机操作", subtitle: "知识分享", text: "Unity设置相机跟随玩家的操作", url: "/projects/Project5/test.html", show: false },
-		{ go: "🎨 前往", img: "/img/SectorImg/TestSector.jpg", title: "简单的自动化测试案例", subtitle: "实现简单的自动化测试", text: "小白都可以看懂的测试案例", url: "/projects/Project-Test/test.html", show: false },
+		{ go: "🎨 前往", img: "/img/SectorImg/TestSector.jpg", title: "简单的自动化测试", subtitle: "web自动化登录测试案例", text: "小白都可以看懂的测试案例", url: "/projects/Project-Test/test.html", show: false },
 		{ go: "💍 前往", img: "/img/SectorImg/BeggingSector.jpg", title: "赛博要饭", subtitle: "生活不易，卖身也卖艺(", text: "求有钱人包养QAQ", url: "/sbyf/donate.html", show: false },
 		{ go: "🔍 前往", img: "/img/SectorImg/QiongMeiSector.jpg", title: "我也不知道是什么", subtitle: "穹妹赛高！(小声BB)", text: "仅用于个人学习，请勿用于商业用途。", url: " /projects/Game/test.html", show: false }, //链接: https://pan.quark.cn/s/192aa295ae6f 提取码: XHJe
 		
