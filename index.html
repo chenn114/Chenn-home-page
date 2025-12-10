@@ -15,25 +15,14 @@
         <!-- Live2D 核心库 -->
         <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
 
-        <style>
-          /* 看板娘默认右下角 */
-          #waifu {
-            right: 0 !important;
-            left: auto !important;
-            bottom: 0 !important;
-          }
-        </style>
-
         <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            initWidget({
-              waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
-              cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-              modelId: 0,
-              drag: true,        // 开启拖动
-              logLevel: "info",  // 显示更多信息
-              tools:["switch-model","switch-texture","about","quit"],
-            });
+           initWidget({
+            waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
+            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+            modelId: 0,
+            drag: true,
+            tools: ["switch-model", "switch-texture", "about", "quit"],
+            logLevel: "info"
           });
         </script>
         
