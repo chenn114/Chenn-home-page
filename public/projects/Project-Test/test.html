@@ -14,7 +14,7 @@
             background: linear-gradient(45deg, #a2d0ff, #ffffff);
             color: #000000 !important;
             /* 字体变黑 */
-            line-height: 1.8;
+            line-height: 2;
         }
 
         .container {
@@ -54,12 +54,40 @@
         }
 
         code {
-            font-size: 18px;
-            background: #f4f4f4;
-            padding: 10px;
-            border-radius: 6px;
+
+
+            font-size: 16px;
+            font-family: Consolas, "Courier New", monospace;
+
+            /* 背景：星穹铁道的蓝紫透明感 */
+            background: linear-gradient(135deg, rgba(80, 120, 255, 0.15), rgba(180, 90, 255, 0.18));
+            backdrop-filter: blur(6px);
+
+            /* 发光霓虹边框 */
+            border: 1px solid rgba(120, 160, 255, 0.7);
+            box-shadow: 0 0 10px rgba(140, 170, 255, 0.5), 
+                        inset 0 0 10px rgba(120, 160, 255, 0.25);
+
+            padding: 14px 16px;
+            border-radius: 12px;
+            
+            margin-left: 0;    /* 取消自动居中 */
+            margin-right: 0;
+
+            /* 换行 + 左对齐 */
             display: block;
+            white-space: pre-wrap;
+            text-align: left;
+
+            /* 字体颜色：黑 */
+            color: #000000;
             line-height: 1.7;
+        }
+    
+        pre {
+            text-align: left !important;
+            margin-left: 0 !important; /* 防止自动居中 */
+            display: block;
         }
     </style>
 </head>
@@ -90,27 +118,27 @@
         <p>
             首先, 我们需要做一些准备工作。<br>
             
-            1. 准备好一个测试网站,可以是<a href="https://www.baidu.com" target="_blank">百度一下</a>,也可以是别的网站,在本篇教程中,以<a href="https://hmshop-test.itheima.net/Home/user/login.html" target="_blank">商城登录</a>为例子<br>
+            1. 准备好一个测试网站,可以是<a href="https://www.baidu.com" target="_blank" style="color: #ff00ff;">百度一下</a>,也可以是别的网站,在本篇教程中,以<a href="https://hmshop-test.itheima.net/Home/user/login.html" target="_blank" style="color: #ff00ff;">商城登录</a>为例子<br>
             <br>
-            2. 在你的python脚本里导入"time"和"selenium"模块, 如果没有的话去找镜像网站下载,不再赘述<br>
-            <img src="./images/importStep.png" alt="示例图片" style="max-width: 50%; height: auto;"> <br>
+            2. 在你的python脚本里导入"time"和"selenium"模块, 如果没有的话去找镜像网站下载,不再赘述。<br>
             
-            3.准备好一个浏览器,推荐Edge浏览器(注意,浏览器的不同会导致代码有差异,后面还会提及)<br>
+            
+            3.准备好一个浏览器(Google,Edge,FireFox等),推荐Edge浏览器(注意,浏览器的不同会导致代码有差异,后面还会提及)<br>
             <br>
-            接下来, 我们开始编写"CameraFollow"脚本。利用Transform组件的Translate方法, 我们可以实现相机跟随玩家移动的功能。<br>
+            接下来, 我们正式开始编写"test_login_userPwd_not_correct.py"脚本。<br>
             <br>
-            第一步，我们需要获取玩家的位置, 并且获得相机与玩家之间的距离。因此需要先定义一些变量。<br>
-            在public class CameraFollow中, 定义以下变量:<br>
+            第一步,先导包。按如下分别导入<b>"sleep","webdriver"和"By"</b>模块<br>
+            
+            <img src="./images/importStep.png" alt="示例图片" style="max-width: 50%; height: auto;"> <br>     
+
             <code>
-                private GameObject player; // 定义玩家物体<br>
-                private Vector3 offset; // 定义了一个Vector3向量变量(注意是向量，有方向)<br>
-                public float Smoothing = 5f;// 定义了平滑度(即相机跟随玩家移动的平滑程度)<br>
+            from time import sleep
+            from selenium import webdriver
+            from selenium.webdriver.common.by import By
             </code>
-            <br>
             
-            第二步, 我们需要在Awake方法中获取玩家物体, 并且在Start方法中获取相机与玩家之间的距离(即offset的值)。<br>
-            Awake方法是在游戏开始时执行的, 而Start方法是在游戏开始后执行的。因此Awake方法中的代码会先于Start方法执行。<br>
-            所以代码中Awake方法需要放在Start方法之前。<br>
+            第二步, 获取浏览器(Edge,Chrome,FireFox等), 并且告诉浏览器要测的网址。
+            
             <br>
             获取玩家物体: 利用FindGameObjectWithTag方法, 获取玩家物体。<br>
             <code>

@@ -14,6 +14,16 @@
     <script type="module" src="/src/main.js"></script>
         <!-- Live2D 核心库 -->
         <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
+        
+        <style>
+          /* 看板娘默认右下角 */
+          #waifu {
+            right: 0 !important;
+            left: auto !important;
+            bottom: 0 !important;
+          }
+        </style>
+
         <script>
           document.addEventListener("DOMContentLoaded", () => {
             initWidget({
@@ -22,7 +32,7 @@
               modelId: 0,
               drag: true,        // 开启拖动
               logLevel: "info",  // 显示更多信息
-              tools: ["random","hide","info"], // 按钮
+              tools: [], // 按钮
             });
           });
         </script>
