@@ -137,47 +137,96 @@
             from selenium.webdriver.common.by import By
             </code>
             
-            第二步, 获取浏览器(Edge,Chrome,FireFox等), 并且告诉浏览器要测的网址。
-            
-            <br>
-            获取玩家物体: 利用FindGameObjectWithTag方法, 获取玩家物体。<br>
+            第二步, 获取浏览器(Edge,Chrome,FireFox等), 并且告诉浏览器要测的网址, 即"https://hmshop-test.itheima.net/Home/user/login.html"。<br>
+            同时为了方便观测,不要忘记利用maximize_window把窗口最大化。<br>
+            如果选择谷歌浏览器,代码需要改为<b>"browser = webdriver.Chrome()"</b>,同理IE,Firefox等。
             <code>
-                private void Awake()
-                {
-                    player =GameObject.FindGameObjectWithTag("Player"); 
-                }//根据tag获取游戏角色                                                 
+                browser = webdriver.Edge() 
+                browser.get("https://hmshop-test.itheima.net/Home/user/login.html")
+                browser.maximize_window()
             </code>
-            <img src="./images/Step4-2.png" alt="示例图片" style="max-width: 80%; height: auto;"> <br>
+
+            <img src="./images/BrowserStep.png" alt="示例图片" style="max-width: 80%; height: auto;"> <br>     
+            
+            
+            第三步,也是最重要的一步,需要进行<b>"输入用户名,密码,点击登录"</b>一系列操作<br>
+            那么浏览器如何去进行相关操作呢？那就是："定位"<br>
+
+            打开给定的网址,点击F12进入开发者模式,如下图所示：<br>
+            <img src="./images/DeveloperStep.png" alt="示例图片" style="max-width: 100%; height: auto;"> <br>     
+            
+            分别定位"用户名,密码,验证码,登录按钮"模块的位置
+            <img src="./images/UserNameStep.png" alt="示例图片" style="max-width: 90%; height: auto;"> <br>     
+            <img src="./images/PassWordStep.png" alt="示例图片" style="max-width: 90%; height: auto;"> <br> 
+            <img src="./images/VerifyCodeStep.png" alt="示例图片" style="max-width: 90%; height: auto;"> <br>
+            <img src="./images/LoginButtonStep.png" alt="示例图片" style="max-width: 90%; height: auto;"> <br>
+
+            不难发现,它们在网页中有着属于各自的属性,如name,class,id等。其中为了唯一地定位我们需要的元素,我们这里选择
+            利用每个元素的ID属性(因为在网页中,每个元素的ID值唯一)<br>
+
+            验证其唯一性的方法：以查找用户名为例子, "ctrl+F"打开查找界面, 输入[id="username"]进行查找,右边显示 1 of 1 即可<br>
+            <img src="./images/SearchUserNameStep.png" alt="示例图片" style="max-width: 90%; height: auto;"> <br>     
+
+            在实际代码中,就可以利用刚才的方法去定位我们需要的元素(方法并不唯一,也可以用By.CSS_SELECTOR等方法)
+            <code>
+                #定位用户名
+                browser.find_element(By.ID, 'username')        
+                #定位密码
+                browser.find_element(By.ID, 'password')
+                #定位验证码
+                browser.find_element(By.ID, 'vericify_code')
+                #定位登录按钮
+                browser.find_element(By.name, 'sbtbutton')                  
+            </code>
+            However,仅仅定位元素是不够的,还需要填写相关字段,于是可以用send_keys("114514")来输入内容;
+            利用click()来进行点击操作<br>
+
+            于是代码变成:<br>
+            <code>
+                # 输入用户名
+                browser.find_element(By.ID, 'username').send_keys('13800001111')
+                # 输入密码
+                browser.find_element(By.ID, 'password').send_keys('114514')
+                # 输入验证码
+                browser.find_element(By.ID, 'verify_code').send_keys('8888')
+                sleep(2)
+                # 点击登录
+                browser.find_element(By.NAME, 'sbtbutton').click()                
+            </code>
 
             <br>
-            获取相机与玩家之间的距离: 利用transform.position - player.transform.position (相机自身的位置 - 玩家的位置), 获取相机与玩家之间的距离。<br>
-            <code>
-                private void Start()
-                {
-                    offset = transform.position - player.transform.position; // 获取相机与玩家之间的距离
-                }
-            </code>
-            <br>
-            第三步, 我们需要在FixedUpdate方法中实现相机跟随玩家移动的功能。<br>
-            为了不受到帧率的影响, 我们更新距离的函数放在FixedUpdate函数中, 
-            按照固定间隔执行更新(0.02s), 同时为了相机跟随玩家的移动更加平滑, 我们需要利用之前定义的平滑度, 再加上Math.Lerp函数。
-            (此处不再赘述Math.Lerp函数的作用)<br>
+            至此,一个最简单的自动化登录完成。但这还远远不够,如何判断是否登录成功/失败？
+            这便用到了后面的<b>断言功能</b>(MD再说吧,写教程真累)<br>
             
+            完整代码如下：<br>
             <code>
-                private void FixedUpdate()
-                {
-                    transform.position = Vector3.Lerp(transform.position, offset + player.transform.position, Smoothing*Time.deltaTime) ;//相机跟随功能 
-                }
-            </code>
-            
+                from time import sleep
+                from selenium import webdriver
+                from selenium.webdriver.common.by import By
 
+                browser = webdriver.Edge()
+                browser.get("https://hmshop-test.itheima.net/Home/user/login.html")
+                browser.maximize_window()
+
+                # 隐式等待10s
+                browser.implicitly_wait(2)
+
+                # 输入用户名
+                browser.find_element(By.ID, 'username').send_keys('13800001111')
+                # 输入错误密码
+                browser.find_element(By.ID, 'password').send_keys('114514')
+                # 输入验证码
+                browser.find_element(By.ID, 'verify_code').send_keys('8888')
+                sleep(2)
+                # 点击登录
+                browser.find_element(By.NAME, 'sbtbutton').click()
+                sleep(2)
+                browser.quit()
+            </code>
         </p>
-        至此, 一个简单的Unity相机跟随玩家移动功能就写好了。 方法不唯一, 在此只分享个人的拙见。感谢阅读！
-        <img src="./images/demo.png" alt="示例图片" style="max-width: 80%; height: auto;">
+        至此, 一个简单自动化测试功能就写好了。 方法不唯一, 在此只分享个人的拙见。感谢阅读！
+        
 
-        <p>
-            其他内容待续...
-        </p>
 
         <a href="https://chenn113.pages.dev/" class="back-btn">⬅ 返回主页</a>
     </div>
