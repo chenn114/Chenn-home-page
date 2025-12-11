@@ -103,7 +103,7 @@ export default {
           const timeoutPromise = new Promise((resolve) => {
             setTimeout(() => {
               resolve();
-            }, 2500);
+            }, 5000);
           });
           
           // 等待所有图片加载完成或超时
