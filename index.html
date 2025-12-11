@@ -8,13 +8,9 @@
     <meta name="description" content="欢迎来到晨殇的奇妙世界！">
     <meta name="keywords" content="Chenn,chenn,个人主页,个人网站">
     <title></title>
-    
-    
-</html>
 
-<!--
     <style>
-      /* 强制固定在右下角 */
+      /* 如果以后启用 LIVE2D，可以保留这些，否则也不会生效 */
       #waifu {
         position: fixed !important;
         right: 0 !important;
@@ -22,32 +18,37 @@
         bottom: 0 !important;
         z-index: 99999 !important;
       }
-    
-      /* 拖动时鼠标变成移动图标 */
+
       #waifu-tips {
         cursor: move !important;
       }
     </style>
-    
   </head>
+
   <body>
-    
     <div id="app"></div>
     <script type="module" src="./src/main.js"></script>
-         Live2D 核心库 
-        <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
 
-        <script>
-          if (window.innerWidth > 768) {
-            initWidget({
-            waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
-            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-            modelId: 0,
-            drag: true,
-            tools: ["switch-model", "switch-texture", "about", "quit"],
-            logLevel: "info"
-          });
-      } 
+    <!--
+    ================================
+       LIVE2D 已完全注释（禁用）
+    ================================
+
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
+
+    <script>
+      if (window.innerWidth > 768) {
+        initWidget({
+          waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
+          cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+          modelId: 0,
+          drag: true,
+          tools: ["switch-model", "switch-texture", "about", "quit"],
+          logLevel: "info"
+        });
+      }
     </script>
+
+    -->
   </body>
---！>
+</html>
