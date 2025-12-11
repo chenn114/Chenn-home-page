@@ -9,47 +9,40 @@
     <meta name="keywords" content="Chenn,chenn,个人主页,个人网站">
     <title></title>
 
-    <!-- PC-only Live2D 看板娘 -->
-<script>
-  // 判断是否为 PC（宽度 > 768px）
-  const isDesktop = window.innerWidth >= 768;
-
-  if (isDesktop) {
-    // 等待整个页面加载完再加载看板娘
-    window.addEventListener("load", () => {
-
-      // 加载 autoload
-      const s = document.createElement("script");
-      s.src = "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js";
-      s.defer = true;
-      document.body.appendChild(s);
-
-      s.onload = () => {
-        // 初始化
-        initWidget({
-          waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
-          cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-          modelId: 0,
-          drag: true,   // 允许拖动
-          tools: ["switch-model","switch-texture","about","quit"],
-          logLevel: "info"
-        });
-
-        // 强制定位置 & 覆盖样式
-        setTimeout(() => {
-          const waifuEl = document.getElementById("waifu");
-          if (waifuEl) {
-            waifuEl.style.position = "fixed";
-            waifuEl.style.right = "0px";
-            waifuEl.style.bottom = "0px";
-            waifuEl.style.left = "auto";
-            waifuEl.style.zIndex = "999999";
-          }
-        }, 500);
+    <style>
+      /* 强制固定在右下角 */
+      #waifu {
+        position: fixed !important;
+        right: 0 !important;
+        left: auto !important;
+        bottom: 0 !important;
+        z-index: 99999 !important;
       }
-    });
-  }
-</script>
+    
+      /* 拖动时鼠标变成移动图标 */
+      #waifu-tips {
+        cursor: move !important;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./src/main.js"></script>
+        <!-- Live2D 核心库 -->
+        <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
 
+        <script>
+          if (window.innerWidth > 768) {
+            initWidget({
+            waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
+            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+            modelId: 0,
+            drag: true,
+            tools: ["switch-model", "switch-texture", "about", "quit"],
+            logLevel: "info"
+          });
+      } 
+    </script>
   </body>
 </html>
