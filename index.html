@@ -28,12 +28,13 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
         <!-- Live2D 核心库 -->
         <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
 
         <script>
-           initWidget({
+          if (window.innerWidth > 768) {
+            initWidget({
             waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
             cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
             modelId: 0,
@@ -41,7 +42,7 @@
             tools: ["switch-model", "switch-texture", "about", "quit"],
             logLevel: "info"
           });
-        </script>
-        
+      } 
+    </script>
   </body>
 </html>
