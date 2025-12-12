@@ -30,8 +30,8 @@ const config = {
 			"type": "video",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
 				"title": "尼尔:机械纪元 团队",
-				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webp",
-				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.wepm",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webm",
+				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.webm",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
