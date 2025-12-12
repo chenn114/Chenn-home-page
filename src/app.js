@@ -99,7 +99,7 @@ export default {
             });
           })
 
-          // 设置超时机制：2.5秒
+          // 设置超时机制：5秒
           const timeoutPromise = new Promise((resolve) => {
             setTimeout(() => {
               resolve();

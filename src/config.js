@@ -27,11 +27,11 @@ const config = {
 	// 默认背景壁纸
 	background: {
 		"pc": {   //pc端
-			"type": "pic",   //"pic":静态壁纸;"video":动态壁纸
+			"type": "video",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
-				"title": "步枪女孩",
-				"preview": "/img/wallpaper/static/步枪女孩/image-pre.webp",
-				"url": "/img/wallpaper/static/步枪女孩/image.png",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"title": "尼尔:机械纪元",
+				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webp",
+				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.mp4",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
