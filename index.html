@@ -22,10 +22,8 @@
     <!-- ================================
        LIVE2D 已完全注释（禁用）
     ================================ -->
-
-    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
-
-    <!--判断是否为手机啥的-->
+    
+    <!-- <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
 
     <script>
       if (window.matchMedia("(pointer: fine)").matches) {
@@ -38,8 +36,26 @@
           logLevel: "info"
         });
       }
+    </script> -->
+    <script>
+      // 只在 PC 上加载 Live2D
+      if (window.matchMedia("(pointer: fine)").matches) {
+        const script = document.createElement("script");
+        script.src = "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js";
+        script.onload = () => {
+          initWidget({
+            waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
+            cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
+            modelId: 0,
+            drag: true,
+            tools: ["switch-model", "switch-texture", "about", "quit"],
+            logLevel: "info"
+          });
+        };
+        document.body.appendChild(script);
+      }
     </script>
-
+    
    
   </body>
 </html>
