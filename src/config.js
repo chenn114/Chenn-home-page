@@ -29,9 +29,9 @@ const config = {
 		"pc": {   //pc端
 			"type": "video",   //"pic":静态壁纸;"video":动态壁纸
 			"datainfo": {
-				"title": "尼尔:机械纪元",
+				"title": "尼尔:机械纪元 团队",
 				"preview": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team-pre.webp",
-				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.mp4",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
+				"url": "/img/wallpaper/dynamic/尼尔：机械纪元 团队/Nier-Automata-Team.wepm",     //当然，也可填写网络地址或壁纸api，如随机PC壁纸api："url":"https://t.mwm.moe/pc"
 			},
 		},
 		"mobile": {   //移动端
