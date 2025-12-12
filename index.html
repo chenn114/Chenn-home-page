@@ -24,12 +24,12 @@
        LIVE2D 已完全注释（禁用）
     ================================ -->
 
-    <script> 
-      src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"
-    </script>
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/autoload.js"></script>
+
+    <!--判断是否为手机啥的-->
 
     <script>
-      if (window.innerWidth > 768) {
+      if (window.matchMedia("(pointer: fine)").matches) {
         initWidget({
           waifuPath: "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu-tips.json",
           cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
